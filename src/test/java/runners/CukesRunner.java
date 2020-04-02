@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import utilities.Config;
 import utilities.DBUtility;
 import utilities.Driver;
+import utilities.ExtentReport;
 
 
 import java.sql.SQLException;
@@ -22,18 +23,22 @@ import java.sql.SQLException;
         features="src/test/resources/features",
         glue="steps_def",
         dryRun= false,
-        tags = "@postjob"
+        tags = "@regression"
 )
 
 public class CukesRunner {
 
+
+
     @BeforeClass
     public static void  setUp() throws SQLException {
+       ExtentReport.startTest("google");
 
     }
 
     @AfterClass
     public static void tearDown() throws SQLException {
+
 
     }
 

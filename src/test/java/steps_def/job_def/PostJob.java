@@ -47,7 +47,7 @@ public class PostJob {
     @Then("user upload nee resume")
     public void user_upload_nee_resume() {
 //        SeleniumUtils.waitForVisibility(dice_page.uploadBtn,5);
-        dice_page.uploadBtn.sendKeys("src/test/resources/S_Buciuscan_Resume.pdf");
+        dice_page.uploadBtn.sendKeys("C:/Users/Serghei/IdeaProjects/sandayTernimal/SBCapital/src/test/resources/S_Buciuscan_Resume.pdf");
         SeleniumUtils.pause(2);
         dice_page.noChanges.click();
     }

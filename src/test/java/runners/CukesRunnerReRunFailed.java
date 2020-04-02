@@ -15,9 +15,9 @@ import java.sql.SQLException;
         plugin = {
                 "pretty", "html:target/cucumber-html-report2",
                 "json:target/cucumber2.json", "junit:target/cucumber2.xml"},
-        glue = "step_definitions")
+        glue = "steps_def")
 
-public class RerunFailed {
+public class CukesRunnerReRunFailed {
 
 
     @BeforeClass
