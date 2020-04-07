@@ -23,7 +23,7 @@ import java.sql.SQLException;
         features="src/test/resources/features",
         glue="steps_def",
         dryRun= false,
-        tags = "@regression"
+        tags = "@postjob"
 )
 
 public class CukesRunner {

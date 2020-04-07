@@ -61,6 +61,15 @@
         </executions>
     </plugin>
 </plugins>
+    <resources>
+        <!-- regular resource processsing for everything except logback.xml -->
+        <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>*.*</include>
+            </includes>
+        </resource>
+    </resources>
 </build>
 <dependencies> <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -127,12 +136,25 @@
         <version>1.18.8</version>
         <scope>provided</scope>
     </dependency>
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>json-schema-validator</artifactId>
+        <version>4.0.0</version>
+    </dependency>
 
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
         <version>2.10.0</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-library -->
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-library</artifactId>
+        <version>2.2</version>
+        <scope>test</scope>
+    </dependency>
+
 
     <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
     <dependency>

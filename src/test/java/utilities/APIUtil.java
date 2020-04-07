@@ -20,7 +20,7 @@ public class  APIUtil {
         String uri = Config.getProperty("baseURL") + resource;
         Response response = RestAssured.get(uri);
 
-        System.out.println(response.asString());
+//        System.out.println(response.asString());
         System.out.println("STATUS CODE: " + response.statusCode());
 
         ObjectMapper objectMapper = new ObjectMapper();
