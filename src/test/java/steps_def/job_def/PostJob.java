@@ -25,7 +25,9 @@ public class PostJob {
         SeleniumUtils.pause(2);
         dice_page.loginBtn.click();
         dice_page.loginOpenBtn.click();
+        SeleniumUtils.pause(2);
         dice_page.emailInput.sendKeys(Config.getProperty("dicelogin"));
+        SeleniumUtils.pause(2);
         dice_page.passwordInput.sendKeys(Config.getProperty("dicepass"));
         dice_page.emailInput.click();
         dice_page.signInBtn.click();
