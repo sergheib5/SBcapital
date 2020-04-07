@@ -7,6 +7,8 @@ import utilities.Config;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.io.File;
+
 public class PostJob {
     Dice_page dice_page = new Dice_page();
 
@@ -47,7 +49,10 @@ public class PostJob {
     @Then("user upload nee resume")
     public void user_upload_nee_resume() {
 //        SeleniumUtils.waitForVisibility(dice_page.uploadBtn,5);
-        dice_page.uploadBtn.sendKeys("C:/Users/Serghei/IdeaProjects/sandayTernimal/SBCapital/src/test/resources/S_Buciuscan_Resume.pdf");
+        String filename = "./src/S_Buciuscan_Resume.pdf";
+        File file = new File(filename);
+        String path = file.getAbsolutePath();
+        dice_page.uploadBtn.sendKeys(path);
         SeleniumUtils.pause(2);
         dice_page.noChanges.click();
     }
