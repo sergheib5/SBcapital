@@ -35,7 +35,7 @@
     },
     "Humidity": {
       "$id": "#/properties/Humidity",
-      "type": "string",
+      "type": "integer",
       "title": "The Humidity Schema",
       "description": "An explanation about the purpose of this instance.",
       "default": "",
