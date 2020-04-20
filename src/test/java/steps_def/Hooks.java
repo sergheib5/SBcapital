@@ -18,7 +18,7 @@ public class Hooks {
         // Anything that you want to run before each Scenario]
         TempStorage.clear();
         Log.start(scenario.getName());
-        ExtentReport.startTest(scenario.getName());
+//        ExtentReport.startTest(scenario.getName());
     }
 
 
@@ -31,10 +31,10 @@ public class Hooks {
 
             scenario.embed(screenshot, "image/png");
 
-            ExtentReport.fail();
+//            ExtentReport.fail();
         }
         else {
-            ExtentReport.pass();
+//            ExtentReport.pass();
         }
 
         Driver.quitDriver();

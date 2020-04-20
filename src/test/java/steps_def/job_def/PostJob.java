@@ -6,7 +6,6 @@ import pages.job.Dice_page;
 import utilities.Config;
 import utilities.Driver;
 import utilities.SeleniumUtils;
-
 import java.io.File;
 
 public class PostJob {
@@ -16,8 +15,6 @@ public class PostJob {
     @Given("user open the dice website {string}")
     public void user_open_the_dice_website(String site) {
         Driver.getDriver().get(site);
-
-
     }
 
     @Given("user put credentials {string} and {string}")
@@ -31,7 +28,6 @@ public class PostJob {
         dice_page.passwordInput.sendKeys(Config.getProperty("dicepass"));
         dice_page.emailInput.click();
         dice_page.signInBtn.click();
-
     }
 
     @Given("user open the profile")
@@ -45,7 +41,6 @@ public class PostJob {
     public void user_clicks_on_edit_resume() {
         SeleniumUtils.waitForVisibility(dice_page.editOfProfile,5);
         dice_page.editOfProfile.click();
-
     }
 
     @Then("user upload nee resume")
@@ -63,6 +58,5 @@ public class PostJob {
     public void user_saved_the_profile() {
         SeleniumUtils.pause(2);
         dice_page.savedBtn.click();
-
     }
 }

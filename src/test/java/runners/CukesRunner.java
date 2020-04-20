@@ -23,7 +23,7 @@ import java.sql.SQLException;
         features="src/test/resources/features",
         glue="steps_def",
         dryRun= false,
-        tags = "@regression"
+        tags = "@excel"
 )
 
 public class CukesRunner {
@@ -32,7 +32,7 @@ public class CukesRunner {
 
     @BeforeClass
     public static void  setUp() throws SQLException {
-       ExtentReport.startTest("google");
+
 
     }
 
